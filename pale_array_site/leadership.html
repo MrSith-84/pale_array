@@ -5,42 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pale Array — Authority Figures</title>
   <meta name="description" content="Pale Array — rogue technæ cell: Crownless initiative, intel, concord operations." />
+  <link rel="icon" href="assets/img/pale_array_crest.png" type="image/png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/utilities.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="index.html">The Pale Array</a>
-        <nav class="nav">
-          <a href="intel.html" class="">Consortium Intel</a>
-          <a href="concord.html" class="">Concord Ops</a>
-          <a href="leadership.html" class="active">Authority</a>
-          <a href="fleets.html" class="">Fleets</a>
-          <button id="themeToggle" aria-label="Toggle color theme">◐</button>
-        </nav>
-      </div>
-    </header>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="astral-skip-link">Skip to main content</a>
+  <!-- Astral background layers -->
+  <div class="astral-background"></div>
+  <div class="astral-starfield">
+    <img src="assets/img/astral_field.svg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+  <header class="astral-nav">
+    <div class="astral-container">
+      <a class="astral-brand" href="index.html">The Pale Array</a>
+      <nav class="astral-nav-links">
+        <a href="intel.html" class="astral-nav-link">Consortium Intel</a>
+        <a href="concord.html" class="astral-nav-link">Concord Ops</a>
+        <a href="leadership.html" class="astral-nav-link" aria-current="page">Authority</a>
+        <a href="fleets.html" class="astral-nav-link">Fleets</a>
+        <button id="themeToggle" class="astral-theme-toggle" aria-label="Toggle color theme">◐</button>
+      </nav>
+    </div>
+  </header>
     
   <main>
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
-      <h1>Pale Array Authority</h1>
-      <p>Authority figures, divisions, and doctrine whispers.</p>
+    <div style="display: flex; gap: 2.5rem; align-items: flex-start;">
+      <aside style="min-width: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <nav class="side-nav" style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 3.5rem;">
+          <a href="divisions.html" class="btn">Divisions</a>
+          <a href="authority-figures.html" class="btn">Authority Figures</a>
+          <a href="doctrine-whispers.html" class="btn">Doctrine Whispers</a>
+        </nav>
+      </aside>
+      <div style="flex: 1;">
+        <div class="section-head" style="text-align:center;">
+          <h1 style="margin-bottom:2.5rem;">Pale Array Authority</h1>
+        </div>
+        <div id="leaders" class="card-grid">Loading…</div>
+      </div>
     </div>
-    <div id="leaders" class="list-cards">Loading…</div>
   </div>
 </section>
 </main>
   
-    <footer class="site-footer">
-      <div class="wrap breadcrumbs">
-        <nav>
+    <footer class="site-footer" style="text-align:center;">
+      <div class="wrap breadcrumbs" style="display:flex;flex-direction:column;align-items:center;">
+        <nav style="text-align:center;">
           <a href="index.html">The Pale Array</a> <span class="sep">/</span>
           <span id="crumb">Pale Array - Authority Figures</span>
         </nav>
-        <small>© The Pale Array — Crownless Initiative</small>
+        <small style="display:block;text-align:center;">© The Pale Array — Crownless Initiative</small>
       </div>
     </footer>
     

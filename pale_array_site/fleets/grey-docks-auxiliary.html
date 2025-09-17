@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grey Docks Auxiliary — Pale Array Fleet</title>
+  <meta name="description" content="Grey Docks Auxiliary: Semi-autonomous logistics wing of the Pale Array." />
+  <link rel="icon" href="../assets/img/pale_array_crest.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/utilities.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="astral-skip-link">Skip to main content</a>
+  <div class="astral-background"></div>
+  <div class="astral-starfield">
+  <img src="img/astral_field.svg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+  <header class="astral-nav">
+    <div class="astral-container">
+      <a class="astral-brand" href="../index.html">The Pale Array</a>
+      <nav class="astral-nav-links">
+        <a href="../intel.html" class="astral-nav-link">Consortium Intel</a>
+        <a href="../concord.html" class="astral-nav-link">Concord Ops</a>
+        <a href="../leadership.html" class="astral-nav-link">Authority</a>
+        <a href="../fleets.html" class="astral-nav-link" aria-current="page">Fleets</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <div class="astral-container u-mt-lg u-mb-md">
+      <label for="fleet-switcher" class="u-text-base u-mr-sm">Switch Fleet:</label>
+      <select id="fleet-switcher" class="astral-dropdown" onchange="if(this.value) window.location.href=this.value;">
+        <option value="null-crown-patrol.html">Null Crown Patrol</option>
+        <option value="grey-docks-auxiliary.html" selected>Grey Docks Auxiliary</option>
+        <option value="cicada-fork-squadron.html">Cicada Fork Squadron</option>
+      </select>
+    </div>
+    <section class="astral-hero">
+      <div class="astral-container">
+        <div class="astral-hero-grid">
+          <div class="astral-hero-crest">
+            <img src="img/GreyDocksAux.png" alt="Grey Docks Auxiliary fleet" class="fleet-image" />
+          </div>
+          <div class="astral-hero-content briefing-card">
+            <h1>Grey Docks Auxiliary</h1>
+            <p class="u-text-muted">Semi-autonomous logistics wing</p>
+            <ul class="u-mt-md u-text-base">
+              <li><strong>Commander:</strong> Artifex Tor Halin</li>
+              <li><strong>Adjunct AI:</strong> CROWNLESS//Lattice-β (bounded)</li>
+              <li><strong>Mandate:</strong> Cold-start and migrate photonic compute sanctums; keep the lights while unseen.</li>
+            </ul>
+            <h3 class="u-mt-lg">Fleet Compliment</h3>
+            <ul class="u-text-base">
+              <li>GDA-01 'Quiet Tide' — Fogrunner tender</li>
+              <li>GDA-12 'Slip Vector' — Courier sloop</li>
+            </ul>
+            <h3 class="u-mt-lg">Current Operations</h3>
+            <ul class="u-text-base">
+              <li>Cold-starting new sanctum nodes in the Grey Dock sector</li>
+              <li>Stealth migration of compute assets</li>
+              <li>Maintaining logistics corridors under low visibility</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap breadcrumbs">
+      <nav>
+        <a href="../index.html">The Pale Array</a> <span class="sep">/</span>
+        <span id="crumb">Grey Docks Auxiliary</span>
+      </nav>
+      <small>© The Pale Array — Crownless Initiative</small>
+    </div>
+  </footer>
+</body>
+</html>

@@ -7,7 +7,7 @@ Executive Summary:
 - Opportunities: proof-dependency and thermal signatures.
 
 Identifiers:
-- Eclipse ring + hollow hex + inverted crown; palindromic callsigns; cold-white/silver palette.
+palindromic callsigns; cold-white/silver palette.
 
 Org:
 - Architectorium; Lattice Foundry; Glass Choir; Veil Cartel.

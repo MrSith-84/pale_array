@@ -52,9 +52,10 @@
     fetch("data/factions.json").then(r=>r.json()).then(rows=>{
       const grid = document.getElementById("intelGrid"); grid.textContent="";
       rows.forEach(r=>{
+        const badgeClass = r.threatLevel === "High" ? "badge high-badge" : "badge";
         const card = el(`<article class="card">
           <div class="pad">
-            <h3>${r.name} <span class="badge">${r.threatLevel}</span></h3>
+            <h3>${r.name} <span class="${badgeClass}">${r.threatLevel}</span></h3>
             <p>${r.summary}</p>
             <div class="kv">
               <strong>Leader</strong><div>${r.leader}</div>

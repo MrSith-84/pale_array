@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cicada Fork Squadron — Pale Array Fleet</title>
+  <meta name="description" content="Cicada Fork Squadron: Red-team reconnaissance flotilla of the Pale Array." />
+  <link rel="icon" href="../assets/img/pale_array_crest.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/utilities.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="astral-skip-link">Skip to main content</a>
+  <div class="astral-background"></div>
+  <div class="astral-starfield">
+  <img src="img/astral_field.svg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+  <header class="astral-nav">
+    <div class="astral-container">
+      <a class="astral-brand" href="../index.html">The Pale Array</a>
+      <nav class="astral-nav-links">
+        <a href="../intel.html" class="astral-nav-link">Consortium Intel</a>
+        <a href="../concord.html" class="astral-nav-link">Concord Ops</a>
+        <a href="../leadership.html" class="astral-nav-link">Authority</a>
+        <a href="../fleets.html" class="astral-nav-link" aria-current="page">Fleets</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <div class="astral-container u-mt-lg u-mb-md">
+      <label for="fleet-switcher" class="u-text-base u-mr-sm">Switch Fleet:</label>
+      <select id="fleet-switcher" class="astral-dropdown" onchange="if(this.value) window.location.href=this.value;">
+        <option value="null-crown-patrol.html">Null Crown Patrol</option>
+        <option value="grey-docks-auxiliary.html">Grey Docks Auxiliary</option>
+        <option value="cicada-fork-squadron.html" selected>Cicada Fork Squadron</option>
+      </select>
+    </div>
+    <section class="astral-hero">
+      <div class="astral-container">
+        <div class="astral-hero-grid">
+          <div class="astral-hero-crest">
+            <img src="img/CicadaForkSquad.png" alt="Cicada Fork Squadron fleet" class="fleet-image" />
+          </div>
+          <div class="astral-hero-content briefing-card">
+            <h1>Cicada Fork Squadron</h1>
+            <p class="u-text-muted">Red-team reconnaissance flotilla</p>
+            <ul class="u-mt-md u-text-base">
+              <li><strong>Commander:</strong> Chorister Lysa Orell</li>
+              <li><strong>Adjunct AI:</strong> CROWNLESS//Fork-γ (sandboxed)</li>
+              <li><strong>Mandate:</strong> Spin disposable inference identities; probe narrative and protocol attack surfaces.</li>
+            </ul>
+            <h3 class="u-mt-lg">Fleet Compliment</h3>
+            <ul class="u-text-base">
+              <li>CFS-3 'Palindrome' — Signal cutter</li>
+              <li>CFS-7 'Quiet Choir' — ELINT skiff</li>
+            </ul>
+            <h3 class="u-mt-lg">Current Operations</h3>
+            <ul class="u-text-base">
+              <li>Red-team probing of protocol vulnerabilities</li>
+              <li>Deploying disposable inference identities</li>
+              <li>Reconnaissance of narrative attack surfaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap breadcrumbs">
+      <nav>
+        <a href="../index.html">The Pale Array</a> <span class="sep">/</span>
+        <span id="crumb">Cicada Fork Squadron</span>
+      </nav>
+      <small>© The Pale Array — Crownless Initiative</small>
+    </div>
+  </footer>
+</body>
+</html>

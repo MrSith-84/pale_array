@@ -5,42 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pale Array — Fleets</title>
   <meta name="description" content="Pale Array — rogue technæ cell: Crownless initiative, intel, concord operations." />
+  <link rel="icon" href="assets/img/pale_array_crest.png" type="image/png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/utilities.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
+<body style="background:url('assets/img/astral_field.svg') no-repeat center center fixed, var(--bg); background-size:cover;">
   
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="index.html">The Pale Array</a>
-        <nav class="nav">
-          <a href="intel.html" class="">Consortium Intel</a>
-          <a href="concord.html" class="">Concord Ops</a>
-          <a href="leadership.html" class="">Authority</a>
-          <a href="fleets.html" class="active">Fleets</a>
-          <button id="themeToggle" aria-label="Toggle color theme">◐</button>
-        </nav>
-      </div>
-    </header>
-    
-  <main>
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h1>Elite Units — Semi‑Autonomous Fleets</h1>
-      <p>Human-in-the-loop formations with bounded Crownless adjuncts.</p>
-    </div>
-    <div id="fleets" class="list-cards">Loading…</div>
+  <a href="#main-content" class="astral-skip-link">Skip to main content</a>
+  <div class="astral-background"></div>
+  <div class="astral-starfield">
+    <img src="assets/img/astral_field.svg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
-</section>
-</main>
+  <header class="astral-nav">
+    <div class="astral-container">
+      <a class="astral-brand" href="index.html">The Pale Array</a>
+      <nav class="astral-nav-links">
+        <a href="intel.html" class="astral-nav-link">Consortium Intel</a>
+        <a href="concord.html" class="astral-nav-link">Concord Ops</a>
+        <a href="leadership.html" class="astral-nav-link">Authority</a>
+        <a href="fleets.html" class="astral-nav-link" aria-current="page">Fleets</a>
+        <button id="themeToggle" class="astral-theme-toggle" aria-label="Toggle color theme">◐</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="astral-hero">
+      <div class="astral-container">
+        <div class="astral-hero-grid">
+          <div class="astral-hero-crest">
+            <img src="assets/img/pale_array_crest.png" alt="Pale Array crest" class="fleet-image" />
+            <figcaption class="u-text-muted u-text-sm u-mt-md">
+              Crest of the Pale Array
+            </figcaption>
+          </div>
+          <div class="astral-hero-content briefing-card">
+            <h1>Semi-Autonomous Fleets</h1>
+            <p class="u-text-muted">Human-in-the-loop formations with bounded Crownless adjuncts.</p>
+            <label for="fleetDropdown" class="u-text-lg u-font-heading">Select a Fleet:</label>
+            <select id="fleetDropdown" class="astral-dropdown u-mt-md u-text-base" onchange="if(this.value) window.location.href=this.value;">
+              <option value="">-- Choose Fleet --</option>
+              <option value="fleets/grey-docks-auxiliary.html">Grey Docks Auxiliary</option>
+              <option value="fleets/cicada-fork-squadron.html">Cicada Fork Squadron</option>
+              <option value="fleets/null-crown-patrol.html">Null Crown Patrol</option>
+            </select>
+            <div class="u-mt-xl">
+              <h2 class="u-text-xl u-font-heading">Fleet Overview</h2>
+              <ul class="scifi-fleet-list u-mt-md">
+                <li class="scifi-fleet-item">
+                  <span class="scifi-fleet-icon">🛰️</span>
+                  <span class="scifi-fleet-title">Grey Docks Auxiliary</span>
+                  <span class="scifi-fleet-desc">Logistics, cold-start, and migration of photonic compute sanctums.</span>
+                </li>
+                <li class="scifi-fleet-item">
+                  <span class="scifi-fleet-icon">🛸</span>
+                  <span class="scifi-fleet-title">Cicada Fork Squadron</span>
+                  <span class="scifi-fleet-desc">Red-team reconnaissance, protocol probing, and disposable inference identities.</span>
+                </li>
+                <li class="scifi-fleet-item">
+                  <span class="scifi-fleet-icon">🚀</span>
+                  <span class="scifi-fleet-title">Null Crown Patrol</span>
+                  <span class="scifi-fleet-desc">Escort, containment, and Stability Bubble deployment for sanctums.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   
-    <footer class="site-footer">
-      <div class="wrap breadcrumbs">
-        <nav>
+    <footer class="site-footer" style="text-align:center;">
+      <div class="wrap breadcrumbs" style="display:flex;flex-direction:column;align-items:center;">
+        <nav style="text-align:center;">
           <a href="index.html">The Pale Array</a> <span class="sep">/</span>
           <span id="crumb">Pale Array - Fleets</span>
         </nav>
-        <small>© The Pale Array — Crownless Initiative</small>
+        <small style="display:block;text-align:center;">© The Pale Array — Crownless Initiative</small>
       </div>
     </footer>
     
