@@ -1,0 +1,29 @@
+{
+  "name": "pale-array-site",
+  "version": "1.0.0",
+  "description": "Astral Techno-Rogue static site for The Pale Array",
+  "private": true,
+  "scripts": {
+    "build:css": "postcss assets/css/tokens.css assets/css/components.css assets/css/utilities.css -d dist/css/",
+    "build:html": "node scripts/copy-html.js",
+    "build": "npm run build:css && npm run build:html",
+    "watch:css": "postcss assets/css/tokens.css assets/css/components.css assets/css/utilities.css -d dist/css/ --watch",
+    "dev": "npm run watch:css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
+  },
+  "keywords": [
+    "pale-array",
+    "astral",
+    "techno-rogue",
+    "design-system",
+    "static-site"
+  ],
+  "author": "The Pale Array",
+  "license": "MIT"
+}

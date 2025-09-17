@@ -1,0 +1,331 @@
+/* Components - Astral Techno-Rogue Design System */
+
+/* Typography imports */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Base typography */
+:root {
+  --font-heading: 'Orbitron', monospace;
+  --font-body: 'Rajdhani', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* Layout components */
+.astral-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.astral-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.astral-flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Background layers */
+.astral-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background: 
+    /* Grid pattern */
+    radial-gradient(circle at 25% 25%, rgba(79, 209, 199, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 71, 87, 0.05) 0%, transparent 50%),
+    linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.02) 25%, rgba(255, 255, 255, 0.02) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.02) 75%, rgba(255, 255, 255, 0.02) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.02) 25%, rgba(255, 255, 255, 0.02) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.02) 75%, rgba(255, 255, 255, 0.02) 76%, transparent 77%, transparent);
+  background-size: 100px 100px;
+}
+
+.astral-starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.6;
+}
+
+/* Navigation */
+.astral-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 8, 17, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.astral-nav .astral-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+}
+
+.astral-brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 900;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.astral-nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.astral-nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.astral-nav-link:hover,
+.astral-nav-link[aria-current="page"] {
+  color: var(--text);
+  background: rgba(79, 209, 199, 0.1);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Theme toggle button */
+.astral-theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--text-lg);
+  transition: all 0.3s ease;
+}
+
+.astral-theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+/* Hero section */
+.astral-hero {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.astral-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.astral-hero-crest {
+  position: relative;
+  text-align: center;
+}
+
+.astral-hero-crest img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  filter: drop-shadow(var(--shadow-lg));
+  transition: all 0.5s ease;
+}
+
+.astral-hero-crest:hover img {
+  filter: drop-shadow(var(--shadow-crimson)) drop-shadow(var(--shadow-lg));
+  transform: scale(1.05);
+}
+
+.astral-hero-content h1 {
+  font-size: var(--text-4xl);
+  margin: 0 0 var(--space-md);
+  background: linear-gradient(135deg, var(--text), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.astral-hero-content p {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  margin: 0 0 var(--space-xl);
+  line-height: 1.7;
+}
+
+.astral-hero-content strong {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* Doctrine cards */
+.astral-doctrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+.astral-doctrine-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.astral-doctrine-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--brand));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.astral-doctrine-card:hover {
+  border-color: var(--brand);
+  box-shadow: var(--shadow-crimson);
+  transform: translateY(-2px);
+}
+
+.astral-doctrine-card:hover::before {
+  transform: scaleX(1);
+}
+
+.astral-doctrine-card h4 {
+  font-size: var(--text-lg);
+  margin: 0 0 var(--space-sm);
+  color: var(--accent);
+}
+
+.astral-doctrine-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* CTA buttons */
+.astral-cta {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.astral-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.astral-btn-primary {
+  background: var(--brand);
+  color: white;
+  border: 1px solid var(--brand);
+}
+
+.astral-btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.astral-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.astral-btn-primary:hover {
+  box-shadow: var(--shadow-crimson);
+}
+
+.astral-btn-secondary:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* Skip link for accessibility */
+.astral-skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--brand);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: var(--radius-sm);
+}
+
+.astral-skip-link:focus {
+  top: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .astral-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+  
+  .astral-nav .astral-container {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .astral-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .astral-doctrine {
+    grid-template-columns: 1fr;
+  }
+  
+  .astral-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}

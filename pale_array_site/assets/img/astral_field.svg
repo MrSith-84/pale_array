@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Gradients for nebula effects -->
+    <radialGradient id="crimsonNebula1" cx="0.3" cy="0.2" r="0.4">
+      <stop offset="0%" stop-color="#ff4757" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#ff6b81" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ff4757" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="crimsonNebula2" cx="0.7" cy="0.8" r="0.3">
+      <stop offset="0%" stop-color="#ff6348" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ff4757" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ff6348" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="astralGlow1" cx="0.1" cy="0.7" r="0.25">
+      <stop offset="0%" stop-color="#4fd1c7" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#38b2ac" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#4fd1c7" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="astralGlow2" cx="0.9" cy="0.3" r="0.2">
+      <stop offset="0%" stop-color="#4fd1c7" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#4fd1c7" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Pattern for distant stars -->
+    <pattern id="starField" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="transparent"/>
+      <circle cx="23" cy="41" r="0.5" fill="#e2e8f0" opacity="0.6"/>
+      <circle cx="67" cy="23" r="0.3" fill="#cbd5e0" opacity="0.4"/>
+      <circle cx="145" cy="89" r="0.4" fill="#e2e8f0" opacity="0.5"/>
+      <circle cx="178" cy="134" r="0.2" fill="#a0aec0" opacity="0.3"/>
+      <circle cx="34" cy="167" r="0.3" fill="#e2e8f0" opacity="0.4"/>
+      <circle cx="123" cy="156" r="0.6" fill="#f7fafc" opacity="0.7"/>
+      <circle cx="89" cy="67" r="0.2" fill="#cbd5e0" opacity="0.3"/>
+      <circle cx="156" cy="45" r="0.4" fill="#e2e8f0" opacity="0.5"/>
+      <circle cx="45" cy="123" r="0.3" fill="#a0aec0" opacity="0.4"/>
+      <circle cx="12" cy="89" r="0.2" fill="#e2e8f0" opacity="0.3"/>
+      <circle cx="198" cy="67" r="0.5" fill="#f7fafc" opacity="0.6"/>
+      <circle cx="167" cy="178" r="0.3" fill="#cbd5e0" opacity="0.4"/>
+    </pattern>
+    
+    <!-- Animated pulsar -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Base dark background -->
+  <rect width="1920" height="1080" fill="#000811"/>
+  
+  <!-- Starfield pattern -->
+  <rect width="1920" height="1080" fill="url(#starField)" opacity="0.8"/>
+  
+  <!-- Nebula layers -->
+  <ellipse cx="576" cy="216" rx="400" ry="300" fill="url(#crimsonNebula1)" transform="rotate(-25 576 216)"/>
+  <ellipse cx="1344" cy="864" rx="300" ry="200" fill="url(#crimsonNebula2)" transform="rotate(15 1344 864)"/>
+  <ellipse cx="192" cy="756" rx="250" ry="180" fill="url(#astralGlow1)" transform="rotate(45 192 756)"/>
+  <ellipse cx="1728" cy="324" rx="200" ry="150" fill="url(#astralGlow2)" transform="rotate(-30 1728 324)"/>
+  
+  <!-- Bright stars -->
+  <g filter="url(#glow)">
+    <circle cx="480" cy="300" r="1.5" fill="#4fd1c7" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1200" cy="600" r="1.2" fill="#ff4757" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="800" r="1" fill="#feca57" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1600" cy="200" r="1.3" fill="#a0aec0" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Additional scattered stars -->
+  <circle cx="150" cy="150" r="0.8" fill="#e2e8f0" opacity="0.5"/>
+  <circle cx="800" cy="100" r="0.6" fill="#cbd5e0" opacity="0.4"/>
+  <circle cx="1400" cy="450" r="0.7" fill="#e2e8f0" opacity="0.6"/>
+  <circle cx="600" cy="900" r="0.5" fill="#a0aec0" opacity="0.3"/>
+  <circle cx="1100" cy="850" r="0.9" fill="#f7fafc" opacity="0.7"/>
+  <circle cx="250" cy="400" r="0.4" fill="#cbd5e0" opacity="0.4"/>
+  <circle cx="1650" cy="750" r="0.6" fill="#e2e8f0" opacity="0.5"/>
+  <circle cx="750" cy="500" r="0.3" fill="#a0aec0" opacity="0.3"/>
+  <circle cx="1300" cy="250" r="0.8" fill="#f7fafc" opacity="0.6"/>
+  <circle cx="50" cy="550" r="0.5" fill="#cbd5e0" opacity="0.4"/>
+</svg>

@@ -1,14 +1,42 @@
 
 (function(){
-  // Theme toggle
+  // Enhanced theme cycling: dark → light → void → ember
   const root = document.documentElement;
   const key = "pale-theme";
   const btn = document.getElementById("themeToggle");
+  const themes = ["dark", "light", "void", "ember"];
+  const themeSymbols = {
+    dark: "◐",
+    light: "☀",
+    void: "●", 
+    ember: "🔥"
+  };
+  
+  // Defensive checks and initialization
   const saved = localStorage.getItem(key);
-  if(saved) root.setAttribute("data-theme", saved);
+  const currentTheme = saved && themes.includes(saved) ? saved : "dark";
+  root.setAttribute("data-theme", currentTheme);
+  
+  // Update button symbol and aria-current
+  function updateThemeButton(theme) {
+    if (btn) {
+      btn.textContent = themeSymbols[theme] || "◐";
+      btn.setAttribute("aria-current", theme);
+      btn.setAttribute("aria-label", `Current theme: ${theme}. Click to cycle themes.`);
+    }
+  }
+  
+  updateThemeButton(currentTheme);
+  
   btn?.addEventListener("click", ()=>{
-    const next = root.getAttribute("data-theme")==="dark" ? "light":"dark";
-    root.setAttribute("data-theme", next); localStorage.setItem(key, next);
+    const current = root.getAttribute("data-theme") || "dark";
+    const currentIndex = themes.indexOf(current);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const nextTheme = themes[nextIndex];
+    
+    root.setAttribute("data-theme", nextTheme);
+    localStorage.setItem(key, nextTheme);
+    updateThemeButton(nextTheme);
   });
 
   // Simple per-page loaders

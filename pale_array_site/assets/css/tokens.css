@@ -1,0 +1,102 @@
+/* Design Tokens - Astral Techno-Rogue Design System */
+
+:root {
+  /* Core palette */
+  --astral-void: #000811;
+  --astral-deep: #0a0f1c;
+  --astral-mid: #1a2332;
+  --astral-light: #2d3748;
+  --astral-surface: #3a4553;
+  --astral-text: #e2e8f0;
+  --astral-muted: #8da1b8;
+  --astral-glow: #4fd1c7;
+  --astral-crimson: #ff4757;
+  --astral-ember: #ff6348;
+  --astral-gold: #feca57;
+  
+  /* Theme variables - default dark */
+  --bg: var(--astral-void);
+  --bg-alt: var(--astral-deep);
+  --bg-card: var(--astral-mid);
+  --border: var(--astral-light);
+  --text: var(--astral-text);
+  --text-muted: var(--astral-muted);
+  --accent: var(--astral-glow);
+  --brand: var(--astral-crimson);
+  --warn: var(--astral-ember);
+  --highlight: var(--astral-gold);
+  
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  
+  /* Typography scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-crimson: 0 0 20px rgba(255, 71, 87, 0.3);
+  --shadow-glow: 0 0 20px rgba(79, 209, 199, 0.3);
+}
+
+/* Light theme */
+html[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-alt: #ffffff;
+  --bg-card: #ffffff;
+  --border: #e2e8f0;
+  --text: #1a202c;
+  --text-muted: #4a5568;
+  --accent: #2d7dd2;
+  --brand: #c53030;
+  --warn: #dd6b20;
+  --highlight: #d69e2e;
+}
+
+/* Void theme - ultra dark */
+html[data-theme="void"] {
+  --bg: #000000;
+  --bg-alt: #0a0a0a;
+  --bg-card: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #f7fafc;
+  --text-muted: #a0aec0;
+  --accent: #805ad5;
+  --brand: #e53e3e;
+  --warn: #fd8900;
+  --highlight: #38b2ac;
+}
+
+/* Ember theme - warm crimson */
+html[data-theme="ember"] {
+  --bg: #1a0a08;
+  --bg-alt: #2d1b16;
+  --bg-card: #3c2415;
+  --border: #553426;
+  --text: #fed7cc;
+  --text-muted: #c69896;
+  --accent: #ff8a50;
+  --brand: #ff4757;
+  --warn: #ffc048;
+  --highlight: #ff6b81;
+}
