@@ -1,4 +1,3 @@
-
 (function(){
   // Enhanced theme cycling: dark → light → void → ember
   const root = document.documentElement;
@@ -46,26 +45,65 @@
   if(path==="leadership.html") loadLeaders();
   if(path==="fleets.html") loadFleets();
 
-  function el(html){ const t=document.createElement('template'); t.innerHTML=html.trim(); return t.content.firstChild; }
+  function createCard(className) {
+    const article = document.createElement('article');
+    article.className = className;
+    const div = document.createElement('div');
+    div.className = 'pad';
+    article.appendChild(div);
+    return { article, content: div };
+  }
+
+  function createBadge(className, text) {
+    const span = document.createElement('span');
+    span.className = className;
+    span.textContent = text;
+    return span;
+  }
+
+  function createKVPair(key, value) {
+    const strong = document.createElement('strong');
+    strong.textContent = key;
+    const div = document.createElement('div');
+    div.textContent = value;
+    return { key: strong, value: div };
+  }
 
   function loadIntel(){
     fetch("data/factions.json").then(r=>r.json()).then(rows=>{
       const grid = document.getElementById("intelGrid"); grid.textContent="";
       rows.forEach(r=>{
         const badgeClass = r.threatLevel === "High" ? "badge high-badge" : "badge";
-        const card = el(`<article class="card">
-          <div class="pad">
-            <h3>${r.name} <span class="${badgeClass}">${r.threatLevel}</span></h3>
-            <p>${r.summary}</p>
-            <div class="kv">
-              <strong>Leader</strong><div>${r.leader}</div>
-              <strong>Posture</strong><div>${r.posture}</div>
-              <strong>Known Ops</strong><div>${(r.knownOps||[]).join(", ")}</div>
-              <strong>Symbol</strong><div>${r.symbol}</div>
-            </div>
-          </div>
-        </article>`);
-        grid.appendChild(card);
+        const {article, content} = createCard("card");
+        
+        const h3 = document.createElement('h3');
+        h3.textContent = r.name + ' ';
+        h3.appendChild(createBadge(badgeClass, r.threatLevel));
+        
+        const summary = document.createElement('p');
+        summary.textContent = r.summary;
+        
+        const kv = document.createElement('div');
+        kv.className = 'kv';
+        
+        const leaderKV = createKVPair('Leader', r.leader);
+        const postureKV = createKVPair('Posture', r.posture);
+        const opsKV = createKVPair('Known Ops', (r.knownOps||[]).join(", "));
+        const symbolKV = createKVPair('Symbol', r.symbol);
+        
+        kv.appendChild(leaderKV.key);
+        kv.appendChild(leaderKV.value);
+        kv.appendChild(postureKV.key);
+        kv.appendChild(postureKV.value);
+        kv.appendChild(opsKV.key);
+        kv.appendChild(opsKV.value);
+        kv.appendChild(symbolKV.key);
+        kv.appendChild(symbolKV.value);
+        
+        content.appendChild(h3);
+        content.appendChild(summary);
+        content.appendChild(kv);
+        grid.appendChild(article);
       });
     }).catch(()=>{
       document.getElementById("intelGrid").textContent="Failed to load.";
@@ -89,13 +127,29 @@
     fetch("data/leadership.json").then(r=>r.json()).then(rows=>{
       const list = document.getElementById("leaders"); list.textContent="";
       rows.forEach(r=>{
-        const card = el(`<article class="card"><div class="pad">
-           <h3>${r.name}</h3>
-           <p><em>${r.role}</em> — ${r.division} • <span class="badge">${r.callsign}</span></p>
-           <p>${r.bio}</p>
-           <blockquote>“${r.quote}”</blockquote>
-        </div></article>`);
-        list.appendChild(card);
+        const {article, content} = createCard("card");
+        
+        const h3 = document.createElement('h3');
+        h3.textContent = r.name;
+        
+        const roleP = document.createElement('p');
+        const em = document.createElement('em');
+        em.textContent = r.role;
+        roleP.appendChild(em);
+        roleP.appendChild(document.createTextNode(' — ' + r.division + ' • '));
+        roleP.appendChild(createBadge('badge', r.callsign));
+        
+        const bioP = document.createElement('p');
+        bioP.textContent = r.bio;
+        
+        const quote = document.createElement('blockquote');
+        quote.textContent = '"' + r.quote + '"';
+        
+        content.appendChild(h3);
+        content.appendChild(roleP);
+        content.appendChild(bioP);
+        content.appendChild(quote);
+        list.appendChild(article);
       });
     });
   }
@@ -104,18 +158,45 @@
     fetch("data/fleets.json").then(r=>r.json()).then(rows=>{
       const list = document.getElementById("fleets"); list.textContent="";
       rows.forEach(r=>{
-        const assets = (r.assets||[]).map(a=>`${a.hull} — ${a.class}`).join("<br>");
-        const card = el(`<article class="card"><div class="pad">
-          <h3>${r.unit}</h3>
-          <p><em>${r.type}</em></p>
-          <div class="kv">
-            <strong>Commander</strong><div>${r.commander}</div>
-            <strong>Adjunct AI</strong><div>${r.adjunct_ai}</div>
-            <strong>Mandate</strong><div>${r.mandate}</div>
-            <strong>Assets</strong><div>${assets}</div>
-          </div>
-        </div></article>`);
-        list.appendChild(card);
+        const {article, content} = createCard("card");
+        
+        const h3 = document.createElement('h3');
+        h3.textContent = r.unit;
+        
+        const typeP = document.createElement('p');
+        const em = document.createElement('em');
+        em.textContent = r.type;
+        typeP.appendChild(em);
+        
+        const kv = document.createElement('div');
+        kv.className = 'kv';
+        
+        const commanderKV = createKVPair('Commander', r.commander);
+        const aiKV = createKVPair('Adjunct AI', r.adjunct_ai);
+        const mandateKV = createKVPair('Mandate', r.mandate);
+        
+        // Create assets list safely
+        const assetsKey = document.createElement('strong');
+        assetsKey.textContent = 'Assets';
+        const assetsValue = document.createElement('div');
+        (r.assets||[]).forEach((asset, index) => {
+          if (index > 0) assetsValue.appendChild(document.createElement('br'));
+          assetsValue.appendChild(document.createTextNode(`${asset.hull} — ${asset.class}`));
+        });
+        
+        kv.appendChild(commanderKV.key);
+        kv.appendChild(commanderKV.value);
+        kv.appendChild(aiKV.key);
+        kv.appendChild(aiKV.value);
+        kv.appendChild(mandateKV.key);
+        kv.appendChild(mandateKV.value);
+        kv.appendChild(assetsKey);
+        kv.appendChild(assetsValue);
+        
+        content.appendChild(h3);
+        content.appendChild(typeP);
+        content.appendChild(kv);
+        list.appendChild(article);
       });
     });
   }
