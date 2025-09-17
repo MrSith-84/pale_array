@@ -1,0 +1,53 @@
+[
+  {
+    "unit": "Grey Docks Auxiliary",
+    "type": "Semi-autonomous logistics wing",
+    "commander": "Artifex Tor Halin",
+    "adjunct_ai": "CROWNLESS//Lattice-β (bounded)",
+    "mandate": "Cold-start and migrate photonic compute sanctums; keep the lights while unseen.",
+    "assets": [
+      {
+        "hull": "GDA-01 'Quiet Tide'",
+        "class": "Fogrunner tender"
+      },
+      {
+        "hull": "GDA-12 'Slip Vector'",
+        "class": "Courier sloop"
+      }
+    ]
+  },
+  {
+    "unit": "Cicada Fork Squadron",
+    "type": "Red-team reconnaissance flotilla",
+    "commander": "Chorister Lysa Orell",
+    "adjunct_ai": "CROWNLESS//Fork-γ (sandboxed)",
+    "mandate": "Spin disposable inference identities; probe narrative and protocol attack surfaces.",
+    "assets": [
+      {
+        "hull": "CFS-3 'Palindrome'",
+        "class": "Signal cutter"
+      },
+      {
+        "hull": "CFS-7 'Quiet Choir'",
+        "class": "ELINT skiff"
+      }
+    ]
+  },
+  {
+    "unit": "Null Crown Patrol",
+    "type": "Escort and containment group",
+    "commander": "Veilmaster Kade Rhun",
+    "adjunct_ai": "CROWNLESS//Seal-δ (rules-gated)",
+    "mandate": "Stand up Stability Bubbles around sanctums; escort verification teams.",
+    "assets": [
+      {
+        "hull": "NCP-2 'Bellwether'",
+        "class": "Shield frigate"
+      },
+      {
+        "hull": "NCP-9 'Counterfactual'",
+        "class": "Picket corvette"
+      }
+    ]
+  }
+]

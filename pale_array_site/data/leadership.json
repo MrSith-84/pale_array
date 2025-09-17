@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Praeceptor Avara Nix",
+    "role": "Cell Head (Pale Array)",
+    "division": "Praeceptorate",
+    "callsign": "DEIFIED",
+    "bio": "Architect of the Crownless premise; insists on proof-carrying mutations and randomized consent juries.",
+    "quote": "A crown creates a horizon. Remove the crown."
+  },
+  {
+    "name": "Artifex Tor Halin",
+    "role": "Chief Engineer",
+    "division": "Lattice Foundry",
+    "callsign": "CIVIC",
+    "bio": "Designs Hyperblack photonic spires; prefers cold starts and fog-cooled sanctums.",
+    "quote": "Thermal wake tells truth; hide the wake, not the work."
+  },
+  {
+    "name": "Chorister Lysa Orell",
+    "role": "Director",
+    "division": "Glass Choir",
+    "callsign": "LEVEL",
+    "bio": "Leads adversarial labs and consent integrity; runs micro-jury pilots in neutral towns.",
+    "quote": "Consent without context is theater."
+  },
+  {
+    "name": "Veilmaster Kade Rhun",
+    "role": "Logistics & Deniability",
+    "division": "Veil Cartel",
+    "callsign": "ROTOR",
+    "bio": "Builds quietlines and ghost registries; keeps a ledger of plausible denials.",
+    "quote": "Silence is not absence; it is architecture."
+  }
+]

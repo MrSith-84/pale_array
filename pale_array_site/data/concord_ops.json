@@ -1,0 +1,31 @@
+{
+  "overview": "Federated alliance guided by the Unity Council. Strategy channels into Harmony (de-escalation), Synthesis (trade & infrastructure), and Reconciliation (cultural healing). Instruments include Edicts of Unity, Bridge Charters, and Concord Writs.",
+  "pillars": [
+    {
+      "name": "Harmony",
+      "focus": "Ceasefires, corridor security, conflict de-escalation"
+    },
+    {
+      "name": "Synthesis",
+      "focus": "Trade lanes, energy and data infrastructure, joint standards"
+    },
+    {
+      "name": "Reconciliation",
+      "focus": "Cultural exchanges, memory work, civic stabilization"
+    }
+  ],
+  "operations": [
+    {
+      "codename": "Operation Harmony",
+      "summary": "Mediator teams stabilize outer-rim disputes with verifiable ceasefires."
+    },
+    {
+      "codename": "Project Synthesis",
+      "summary": "Bridge Charters knit rival markets into shared corridors."
+    },
+    {
+      "codename": "Initiative Reconciliation",
+      "summary": "Cultural and educational programs heal long-broken civic memory."
+    }
+  ]
+}

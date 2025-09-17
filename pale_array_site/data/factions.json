@@ -1,0 +1,73 @@
+[
+  {
+    "id": "ghost-legion",
+    "name": "Ghost Legion",
+    "type": "ASC faction",
+    "threatLevel": "High",
+    "posture": "Covert strikes, information warfare, deniable assets",
+    "leader": "Primarch of Shadows — ‘Vex’",
+    "summary": "Elite clandestine force specializing in surgical disruption of rival infrastructures and psy-ops.",
+    "knownOps": [
+      "Blackglass Uplift",
+      "Chimera Node Tap",
+      "Shadespire Evac"
+    ],
+    "symbol": "veiled helm with red lens"
+  },
+  {
+    "id": "echo-tribunal",
+    "name": "Echo Tribunal",
+    "type": "ASC faction",
+    "threatLevel": "Medium",
+    "posture": "Judicial terror, propaganda, narrative control",
+    "leader": "High Orator — ‘Caldrin’",
+    "summary": "Ideological adjudicators who weaponize courts, media, and ritual to cement control.",
+    "knownOps": [
+      "Concordance Trials",
+      "Voice Net Seizure"
+    ],
+    "symbol": "triple-spiral sigil"
+  },
+  {
+    "id": "obsidian-pact",
+    "name": "Obsidian Pact",
+    "type": "ASC faction",
+    "threatLevel": "High",
+    "posture": "Industrial militarism, resource hoarding, paramilitary guilds",
+    "leader": "Forge-Lord — ‘Mord Varr’",
+    "summary": "Extraction syndicate controlling shipyards and alloy routes. Trades steel for loyalty.",
+    "knownOps": [
+      "Iron Gate Offensive",
+      "I-Beam Corridors"
+    ],
+    "symbol": "split anvil over circle"
+  },
+  {
+    "id": "veil-coven",
+    "name": "Veil Coven",
+    "type": "ASC faction",
+    "threatLevel": "Variable",
+    "posture": "Technic-mysticism, cultic recruitment, relic hunts",
+    "leader": "Mist-Seer — ‘Aethra’",
+    "summary": "Esoteric cell merging ritual with tech salvage; volatile but valuable informants.",
+    "knownOps": [
+      "Reliquary Breach",
+      "Hushed Choir"
+    ],
+    "symbol": "crescent veil over spark"
+  },
+  {
+    "id": "iron-syndicate",
+    "name": "Iron Syndicate",
+    "type": "ASC faction",
+    "threatLevel": "Medium",
+    "posture": "Trade coercion, port blockades, contractor fleets",
+    "leader": "Commodore — ‘Brass Nine’",
+    "summary": "Cartel of port masters and convoy captains. Prefers contracts over cannon—until cornered.",
+    "knownOps": [
+      "Tariff Lash",
+      "Portcullis Hold"
+    ],
+    "symbol": "gear with barbed spokes"
+  }
+]

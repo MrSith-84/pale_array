@@ -1,0 +1,61 @@
+{
+  "id": "pale-array",
+  "name": "The Pale Array",
+  "type": "intel_brief",
+  "summary": {
+    "objective": "Birth Crownless, an unruled negotiator AI",
+    "posture": [
+      "markets",
+      "protocols",
+      "proofs"
+    ],
+    "threat": {
+      "strategic": "high",
+      "tactical": "low"
+    },
+    "opportunity": [
+      "proof addiction",
+      "thermal wake"
+    ]
+  },
+  "identifiers": {
+    "symbol": "eclipse ring + hollow hex + inverted crown",
+    "palette": [
+      "#f2f2f5",
+      "#b8bcc6",
+      "#b24064"
+    ],
+    "callsign_pattern": "palindromes"
+  },
+  "org": [
+    "Architectorium",
+    "Lattice Foundry",
+    "Glass Choir",
+    "Veil Cartel"
+  ],
+  "coas": {
+    "diplomatic": [
+      "corridor caps with blinded attestation",
+      "public micro-jury infra",
+      "white-cycle transparency"
+    ],
+    "peace_keepers": [
+      "stability bubbles",
+      "non-lethal ISR",
+      "evac design"
+    ],
+    "joint": [
+      "ethical review",
+      "proof exchange",
+      "graduated sanctions"
+    ]
+  },
+  "engagement_protocol": [
+    "Identify",
+    "Isolate",
+    "Invite",
+    "Inspect",
+    "Inhibit",
+    "Inform"
+  ]
+}
