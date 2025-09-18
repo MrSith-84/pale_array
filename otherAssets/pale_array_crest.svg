@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" aria-label="Pale Array crest">
-  <!-- Eclipse ring -->
-  <circle cx="128" cy="128" r="84"/>
-  <!-- Hollow hexagon -->
-  <path d="M128 68 L161 87 L161 127 L128 146 L95 127 L95 87 Z"/>
-  <!-- Inverted crown (falling) -->
-  <path d="M84 60 L100 76 L128 60 L156 76 L172 60"/>
-  <path d="M84 76 H172"/>
-</svg>
