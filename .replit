@@ -38,10 +38,6 @@ externalPort = 80
 localPort = 32825
 externalPort = 3000
 
-[[ports]]
-localPort = 45817
-externalPort = 3001
-
 [deployment]
 deploymentTarget = "autoscale"
 run = ["http-server", "pale_array_site/dist", "-p", "5000", "-a", "0.0.0.0"]
