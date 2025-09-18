@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:alpine
+    container_name: pale_array_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./pale_array_site:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    environment:
+      - NGINX_PORT=80
+
+# Usage:
+# 1. Place this file in your project root.
+# 2. Run: docker-compose up
+# 3. Visit http://localhost:8080/
+# This serves your static site from the 'pale_array_site' folder using Nginx.
