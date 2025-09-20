@@ -1,6 +1,6 @@
 services:
   web:
-    image: ghcr.io/ascrepo/ascrepo-ascrepo:latest
+    image: ghcr.io/ascrepo/ascrepo:latest
     container_name: pale_array_web
     ports:
       - "8080:8080"     # host:container – adjust to the image’s exposed port
