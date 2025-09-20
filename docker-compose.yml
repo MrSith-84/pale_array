@@ -1,18 +1,12 @@
-version: '3.8'
 services:
   web:
-    image: nginx:alpine
+    image: ghcr.io/ascrepo/ascrepo-ascrepo:latest
     container_name: pale_array_web
     ports:
-      - "8080:80"
+      - "8080:8080"     # host:container – adjust to the image’s exposed port
     volumes:
-      - ./pale_array_site:/usr/share/nginx/html:ro
+      - ./pale_array_site:/usr/share/nginx/html:ro  # drop this if the image already contains the site
     restart: unless-stopped
     environment:
-      - NGINX_PORT=80
+      - PORT=8080       # only keep keys the ASC image actually understands
 
-# Usage:
-# 1. Place this file in your project root.
-# 2. Run: docker-compose up
-# 3. Visit http://localhost:8080/
-# This serves your static site from the 'pale_array_site' folder using Nginx.
